@@ -10,7 +10,7 @@ module.exports = function(router){
 
   ////////////REGISTER THE USER//////////////////
 
-  router.post('/register', corss(), (req, res, next)=>{
+  router.post('/register', cors(), (req, res, next)=>{
     console.log("*********** REGISTER INPUT RESULTS************"); 
     console.log(req.body);
     const playerData = req.body; 
@@ -88,7 +88,7 @@ module.exports = function(router){
 
 ///LOGIN THE PLAYER /////
 
-  router.post('/login',  corss(), (req, res, next)=>{
+  router.post('/login',  cors(), (req, res, next)=>{
     console.log("*********** LOGIN INPUT RESULTS************"); 
     console.log(req.body);
     const playerData = req.body; 
