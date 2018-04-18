@@ -36,8 +36,7 @@ module.exports = function(router){
             throw error; 
           }
           console.log(results); 
-          console.log("pic updated success!")
-          connection.end();
+          console.log("pic updated success!"); 
         }); 
       }
       connection.end();

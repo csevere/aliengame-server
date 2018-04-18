@@ -124,7 +124,6 @@ module.exports = function(router){
             console.log("*************************")
             console.log("login success"); 
             console.log("*************************")
-            connection.end();
           })
         }else{
           res.json({
@@ -132,6 +131,7 @@ module.exports = function(router){
           })
         }
       }
+      connection.end();
     })
   }); 
 }
