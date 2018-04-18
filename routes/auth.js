@@ -75,7 +75,6 @@ module.exports = function(router){
               throw error; 
             }
             console.log("character registration success!");
-            connection.end();
           }); 
           connection.end();
         });
