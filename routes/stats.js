@@ -49,7 +49,7 @@ module.exports = function(router){
             msg: 'updatedStats'
           })
           console.log(results); 
-          connection.release();
+          connection.end();
         }); 
       }
     });

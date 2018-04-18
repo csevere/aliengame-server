@@ -22,7 +22,7 @@ module.exports = function(router){
         })
         console.log("Stats taken from db!"); 
       }
-      connection.release();
+      connection.end();
     });
   });
 }
