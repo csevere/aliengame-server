@@ -5,7 +5,7 @@ module.exports = function(router){
   const cors = require('cors'); 
   connection.connect(); 
 
-  router.post('/stats',  cors(), (req,res, next)=>{
+  router.post('/stats', cors(), (req,res, next)=>{
     const charData = req.body; 
 
     //check the char

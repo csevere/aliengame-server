@@ -91,7 +91,7 @@ module.exports = function(router){
 
 ///LOGIN THE PLAYER /////
 
-  router.post('/login',  cors(), (req, res, next)=>{
+  router.post('/login', cors(), (req, res, next)=>{
     console.log("*********** LOGIN INPUT RESULTS************"); 
     console.log(req.body);
     const playerData = req.body; 
