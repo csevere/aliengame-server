@@ -22,6 +22,7 @@ module.exports = function(router){
           }
           console.log(results); 
           console.log("stats updated success!")
+          connection.end();
         }); 
 
         const checkCharName2 = "SELECT * FROM `characters` WHERE `character` = ?;";
@@ -48,9 +49,9 @@ module.exports = function(router){
             msg: 'updatedStats'
           })
           console.log(results); 
+          connection.end();
         }); 
       }
-      connection.end();
     });
   });
 }

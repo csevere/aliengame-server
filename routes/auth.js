@@ -40,7 +40,6 @@ module.exports = function(router){
         }else{
           resolve();
         }
-        connection.end();
       });
     });
 
