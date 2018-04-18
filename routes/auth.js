@@ -4,12 +4,13 @@ module.exports = function(router){
   var config = require ('../config/config');
   var connection = mysql.createConnection(config); 
   connection.connect(); 
+  const cors = require('cors'); 
   var bcrypt = require ('bcrypt-nodejs');
   var randToken = require('rand-token'); 
 
   ////////////REGISTER THE USER//////////////////
 
-  router.post('/register', (req, res, next)=>{
+  router.post('/register', corss(), (req, res, next)=>{
     console.log("*********** REGISTER INPUT RESULTS************"); 
     console.log(req.body);
     const playerData = req.body; 
@@ -87,7 +88,7 @@ module.exports = function(router){
 
 ///LOGIN THE PLAYER /////
 
-  router.post('/login', (req, res, next)=>{
+  router.post('/login',  corss(), (req, res, next)=>{
     console.log("*********** LOGIN INPUT RESULTS************"); 
     console.log(req.body);
     const playerData = req.body; 
