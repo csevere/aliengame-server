@@ -2,9 +2,10 @@ module.exports = function(router){
   const mysql = require('mysql'); 
   var config = require ('../config/config');
   var connection = mysql.createConnection(config); 
+  const cors = require('cors'); 
   connection.connect(); 
 
-  router.get('/board', (req,res, next)=>{
+  router.get('/board', cors(), (req,res, next)=>{
     const charData = req.body; 
 
     //check the char

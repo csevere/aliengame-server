@@ -2,9 +2,10 @@ module.exports = function(router){
   const mysql = require('mysql'); 
   var config = require ('../config/config');
   var connection = mysql.createConnection(config); 
+  const cors = require('cors'); 
   connection.connect(); 
 
-  router.post('/stats', (req,res, next)=>{
+  router.post('/stats',  cors(), (req,res, next)=>{
     const charData = req.body; 
 
     //check the char
@@ -21,9 +22,9 @@ module.exports = function(router){
             throw error; 
           }
           console.log(results); 
-          
           console.log("stats updated success!")
         }); 
+
         const checkCharName2 = "SELECT * FROM `characters` WHERE `character` = ?;";
         connection.query(checkCharName2, [charData.character], (error, results)=>{
           if(error){
