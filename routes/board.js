@@ -5,7 +5,7 @@ module.exports = function(router){
   var connection = mysql.createConnection(config); 
   connection.connect(); 
 
-  router.post('/board', cors(), (req,res, next)=>{
+  router.post('/board', cors(), (req,res,next)=>{
     const charData = req.body; 
     //check the char
     var selectCharStats = "SELECT * FROM characters ORDER BY experience DESC LIMIT 10;";
@@ -22,7 +22,6 @@ module.exports = function(router){
         })
         console.log("Stats taken from db!"); 
       }
-      connection.end();
     });
   });
 }
