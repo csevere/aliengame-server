@@ -7,10 +7,8 @@ module.exports = function(router){
 
   router.get('/board', cors(), (req,res, next)=>{
     const charData = req.body; 
-
     //check the char
     var selectCharStats = "SELECT * FROM characters ORDER BY experience DESC LIMIT 10;";
-
     connection.query(selectCharStats, (error, results)=>{
       if(error) throw error;
       if(results.length > 0){
@@ -24,7 +22,6 @@ module.exports = function(router){
         })
         console.log("Stats taken from db!"); 
       }
-      connection.end();
     });
   });
 }
