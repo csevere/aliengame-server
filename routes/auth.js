@@ -75,8 +75,10 @@ module.exports = function(router){
               console.log(error)
               throw error; 
             }
-            console.log("character registration success!")
+            console.log("character registration success!");
+            connection.end();
           }); 
+          connection.end();
         });
       }
     ).catch(
@@ -122,6 +124,7 @@ module.exports = function(router){
             console.log("*************************")
             console.log("login success"); 
             console.log("*************************")
+            connection.end();
           })
         }else{
           res.json({
