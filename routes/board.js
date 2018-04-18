@@ -1,9 +1,13 @@
 module.exports = function(router){
+  const cors = require('cors'); 
   const mysql = require('mysql'); 
   var config = require ('../config/config');
   var connection = mysql.createConnection(config); 
-  const cors = require('cors'); 
   connection.connect(); 
+
+
+
+  
 
   router.get('/board', cors(), (req,res, next)=>{
     const charData = req.body; 
@@ -22,6 +26,7 @@ module.exports = function(router){
         })
         console.log("Stats taken from db!"); 
       }
+      connection.end();
     });
   });
 }

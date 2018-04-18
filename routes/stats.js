@@ -1,18 +1,16 @@
 module.exports = function(router){
+  const cors = require('cors'); 
   const mysql = require('mysql'); 
   var config = require ('../config/config');
   var connection = mysql.createConnection(config); 
-  const cors = require('cors'); 
   connection.connect(); 
 
   router.post('/stats', cors(), (req,res, next)=>{
     const charData = req.body; 
-
     //check the char
     var selectCharName = "SELECT * FROM `characters` WHERE `character` = ?;";
     connection.query(selectCharName, [charData.character], (error, results)=>{
-      //done with the connection
-      
+  
       console.log('**********CHECKING CHAR RESULTS*********') 
       console.log(results); 
 
@@ -26,7 +24,6 @@ module.exports = function(router){
           }
           console.log(results); 
           console.log("stats updated success!")
-          connection.end();
         }); 
 
         const checkCharName2 = "SELECT * FROM `characters` WHERE `character` = ?;";

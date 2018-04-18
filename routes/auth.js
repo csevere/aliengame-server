@@ -1,10 +1,9 @@
 module.exports = function(router){
-
+  const cors = require('cors'); 
   const mysql = require('mysql'); 
   var config = require ('../config/config');
   var connection = mysql.createConnection(config); 
   connection.connect(); 
-  const cors = require('cors'); 
   var bcrypt = require ('bcrypt-nodejs');
   var randToken = require('rand-token'); 
 
