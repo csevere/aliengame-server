@@ -53,6 +53,7 @@ module.exports = function(router){
             msg: 'updatedStats'
           })
           console.log(results); 
+          connection.end();
         }); 
       }
     });

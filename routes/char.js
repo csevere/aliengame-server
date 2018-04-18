@@ -6,7 +6,6 @@ module.exports = function(router){
 
   router.post('/char', (req,res, next)=>{
     const charData = req.body; 
-
     //check the char
     var checkCharName = "SELECT * FROM characters WHERE `character` = ?;";
     connection.query(checkCharName, [charData.character], (error, results)=>{
@@ -37,8 +36,10 @@ module.exports = function(router){
           }
           console.log(results); 
           console.log("pic updated success!")
+          connection.end();
         }); 
       }
+      connection.end();
     });
   });
 }
