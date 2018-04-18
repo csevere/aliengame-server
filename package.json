@@ -6,8 +6,7 @@
   "scripts": {
     "start": "nodemon bin/www"
   },
-
-  "keywords":[
+  "keywords": [
     "example",
     "heroku"
   ],
