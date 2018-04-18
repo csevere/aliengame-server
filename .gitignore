@@ -2,6 +2,5 @@
 # dependencies
 node_modules/
 
-
 #ignore doc files
 package-lock.json
