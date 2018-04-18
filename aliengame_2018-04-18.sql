@@ -24,6 +24,7 @@
 # ------------------------------------------------------------
 
 DROP TABLE IF EXISTS `characters`;
+DROP TABLE IF EXISTS `characters`; DROP VIEW IF EXISTS `characters`;
 
 CREATE TABLE `characters` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -57,6 +58,7 @@ UNLOCK TABLES;
 # ------------------------------------------------------------
 
 DROP TABLE IF EXISTS `players`;
+DROP TABLE IF EXISTS `players`; DROP VIEW IF EXISTS `players`;
 
 CREATE TABLE `players` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
