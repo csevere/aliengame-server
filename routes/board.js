@@ -9,7 +9,7 @@ module.exports = function(router){
     const charData = req.body; 
     //check the char
     var selectCharStats = "SELECT * FROM characters ORDER BY experience DESC LIMIT 10;";
-    connection.query(selectCharStats, (error, results)=>{
+    connection.query(selectCharStats, [charData.picture, charData.character, charData.experience, charData.level], (error, results)=>{
       if(error) throw error;
       if(results.length > 0){
         results = JSON.stringify(results); 
