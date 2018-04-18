@@ -1,7 +1,1 @@
-
-# dependencies
-node_modules/
-.env
-
-#ignore doc files
-package-lock.json
+node_modules
