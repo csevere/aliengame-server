@@ -4,8 +4,8 @@ module.exports = function(router){
   var config = require ('../config/config');
   var connection = mysql.createConnection(config); 
   connection.connect(); 
-  
-  router.get('/board', cors(), (req,res, next)=>{
+
+  router.post('/board', cors(), (req,res, next)=>{
     const charData = req.body; 
     //check the char
     var selectCharStats = "SELECT * FROM characters ORDER BY experience DESC LIMIT 10;";
