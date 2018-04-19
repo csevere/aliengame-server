@@ -13,6 +13,7 @@ module.exports = function(router){
     const db_character = req.body.character;
     var db_experience = "";
     var db_time = ""; 
+    var db_level = ""; 
     const hash = bcrypt.hashSync(req.body.password);
 
     const checkPlayerForm = new Promise((resolve, reject)=>{
