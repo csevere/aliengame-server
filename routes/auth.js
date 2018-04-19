@@ -1,6 +1,5 @@
 module.exports = function(router){
   var connection = require('./database');  
-  connection.connect(); 
   var bcrypt = require ('bcrypt-nodejs');
   var randToken = require('rand-token'); 
 
