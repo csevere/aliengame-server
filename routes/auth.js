@@ -9,11 +9,10 @@ module.exports = function(router){
 
   ////////////REGISTER THE USER//////////////////
 
-  router.post('/register', cors(), (req, res, next)=>{
+  router.post('/register', (req, res, next)=>{
     console.log("*********** REGISTER INPUT RESULTS************"); 
     console.log(req.body);
     const playerData = req.body; 
-
     const hash = bcrypt.hashSync(playerData.password);
 
     const checkPlayerForm = new Promise((resolve, reject)=>{
@@ -89,7 +88,7 @@ module.exports = function(router){
 
 ///LOGIN THE PLAYER /////
 
-  router.post('/login', cors(), (req, res, next)=>{
+  router.post('/login', (req, res, next)=>{
     console.log("*********** LOGIN INPUT RESULTS************"); 
     console.log(req.body);
     const playerData = req.body; 
