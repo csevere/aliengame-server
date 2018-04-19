@@ -41,6 +41,7 @@ module.exports = function(router){
           resolve();
         }
       });
+      connection.end();
     });
 
     checkPlayerForm.then(
@@ -76,6 +77,7 @@ module.exports = function(router){
             console.log("character registration success!");
           }); 
         });
+        connection.end();
       }
     ).catch(
         (error)=>{
@@ -121,6 +123,7 @@ module.exports = function(router){
             console.log("login success"); 
             console.log("*************************")
           })
+          connection.end();
         }else{
           res.json({
             msg: 'wrongPassword'
@@ -128,5 +131,6 @@ module.exports = function(router){
         }
       }
     })
+    connection.end();
   }); 
 }
