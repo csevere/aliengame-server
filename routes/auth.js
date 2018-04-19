@@ -107,6 +107,7 @@ module.exports = function(router){
           const updateToken = "UPDATE players SET token = ? WHERE username = ?;";
           var token = randToken.uid(25); 
           connection.query(updateToken, [playerData.username, playerData.token], (error, results)=>{
+            if(error) throw error;
             console.log('**********CHECKING JSON2*********')
             console.log(results); 
             res.json({
@@ -119,6 +120,7 @@ module.exports = function(router){
             console.log("login success"); 
             console.log("*************************")
           })
+          connection.end()
         }else{
           res.json({
             msg: 'wrongPassword'

@@ -9,9 +9,9 @@ module.exports = function(router){
     //check the char
     var selectCharName = "SELECT * FROM `characters` WHERE `character` = ?;";
     connection.query(selectCharName, [charData.character], (error, results)=>{
+      if(error) throw error;
       console.log('**********CHECKING CHAR RESULTS*********') 
       console.log(results); 
-      if(error) throw error;
       if(results.length > 0){
         const updateStatsQuery = "UPDATE `characters` SET level = ?, experience = ?, time = ?  WHERE `character` = ?;"; 
         connection.query(updateStatsQuery, [charData.level, charData.experience, charData.time, charData.character], (error, results)=>{
@@ -25,10 +25,7 @@ module.exports = function(router){
 
         const checkCharName2 = "SELECT * FROM `characters` WHERE `character` = ?;";
         connection.query(checkCharName2, [charData.character], (error, results)=>{
-          if(error){
-            console.log(error)
-            throw error; 
-          }
+          if(error) throw error;
           results = JSON.stringify(results);
           var resJSON = JSON.parse(results);
           var character = resJSON[0].character;
