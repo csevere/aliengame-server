@@ -40,7 +40,6 @@ module.exports = function(router){
           resolve();
         }
       });
-      connection.end();
     });
 
     checkPlayerForm.then(
@@ -76,7 +75,6 @@ module.exports = function(router){
             console.log("character registration success!");
           }); 
         });
-        connection.end();
       }
     ).catch(
         (error)=>{
