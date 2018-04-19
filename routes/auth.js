@@ -75,7 +75,6 @@ module.exports = function(router){
             }
             console.log("character registration success!");
           }); 
-          connection.end();
         });
       }
     ).catch(
@@ -128,7 +127,6 @@ module.exports = function(router){
           })
         }
       }
-      connection.end();
     })
   }); 
 }

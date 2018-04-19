@@ -7,3 +7,13 @@ const config = {
 
 module.exports = config; 
 
+
+// const config = {
+//   host: '127.0.0.1',
+//   user: 'root',
+//   password:'47631987',
+//   database: 'aliengame' 
+// }
+
+// module.exports = config; 
+

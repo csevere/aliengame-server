@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>heroku_9247d7bae2069c2</string>
+			<key>host</key>
+			<string>us-cdbr-iron-east-05.cleardb.net</string>
+			<key>kcid</key>
+			<string>-8176656872144785020</string>
+			<key>name</key>
+			<string>us-cdbr-iron-east-05.cleardb.net</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>b78f6fcfb18642</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK8QDwcIFRYXGBkfICEoLDA0OFUkbnVs
+			bNMJCgsMEBRXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6MNDg+A
+			AoADgASjERITgAWABoAKgA5UdHlwZVRyb3dzVGtleXNfECZTZWxl
+			Y3Rpb25EZXRhaWxUeXBlUHJpbWFyeUtleWVkRGV0YWlsc9MJCgsa
+			HB6hG4AHoR2ACIAJUjIyCdIiIyQlWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNfEBNOU011dGFibGVEaWN0aW9uYXJ5oyQmJ1xOU0RpY3Rpb25h
+			cnlYTlNPYmplY3TSCgspK6EqgAuADdILLS4vWU5TLnN0cmluZ4AM
+			Umlk0iIjMTJfEA9OU011dGFibGVTdHJpbmejMTMnWE5TU3RyaW5n
+			0iIjNTZeTlNNdXRhYmxlQXJyYXmjNTcnV05TQXJyYXnSIiMmOaIm
+			J18QD05TS2V5ZWRBcmNoaXZlctE8PVRkYXRhgAEACAARABoAIwAt
+			ADIANwBJAE8AVgBeAGkAcAB0AHYAeAB6AH4AgACCAIQAhgCLAJAA
+			lQC+AMUAxwDJAMsAzQDPANIA0wDYAOMA7AECAQYBEwEcASEBIwEl
+			AScBLAE2ATgBOwFAAVIBVgFfAWQBcwF3AX8BhAGHAZkBnAGhAAAA
+			AAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAAaM=
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{1, 0}, {1181, 588}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>table</key>
+			<string>characters</string>
+			<key>view</key>
+			<string>SP_VIEW_CONTENT</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>UPDATE characters
+SET experience = '100' 
+WHERE `character` = 'Nakia'</string>
+		<string>UPDATE characters
+SET experience = '200' 
+WHERE `character` = 'Nakia'</string>
+		<string>UPDATE characters
+SET picture = 'assets/players/char4.jpg' 
+WHERE `character` = 'Nakia'</string>
+		<string>UPDATE characters 
+SET picture = 'assets/players/char4.jpg' 
+WHERE `character` = 'Nakia'</string>
+		<string>UPDATE `characters` SET picture = 'assets/players/char4.jpg' WHERE `character` = 'Nakia'</string>
+		<string>UPDATE `characters` SET picture = 'sample' WHERE `character` = 'Nakia'</string>
+		<string>INSERT INTO `characters` (picture) VALUES ("assets/players/char3.png") WHERE `character` = 'Nakia'</string>
+		<string>INSERT INTO `characters` (picture) VALUES ("assets/players/char3.png")</string>
+		<string>INSERT INTO `characters` (picture) VALUES ('assets/players/char3.png')</string>
+		<string>INSERT INTO players (email, username, `password`, `character`, token) VALUES ('carla@gmail','mightyb','123f','sakura',13)</string>
+		<string>INSERT INTO players (email, username, `password`, `character`, token) VALUES (carla@gmail,mightyb,123f,sakura,13)</string>
+		<string>SELECT * FROM players where `character` = 'krusnik'</string>
+		<string>`SELECT * FROM players where character = 'krusnik';`</string>
+		<string>INSERT INTO players(email, username, `password`, `character`, token) VALUES ('test@gmail', 'bestfighter', 'abc123', 'krusnik', 12)</string>
+		<string>INSERT INTO player(email, username, `password`, `character`, token) VALUES ('test@gmail', 'bestfighter', 'abc123', 'krusnik', 12)</string>
+		<string>flush privileges</string>
+		<string>INSERT INTO player(email,username,password,character,token)
+VALUES('test@gmail','bestfighter','abc123','krusnik','12')</string>
+		<string>INSERT INTO players (email, username, password, character, token) 
+VALUES ('test@gmail.com','thebestfighter','abc12345','krusnik','12')</string>
+		<string>INSERT INTO players (email, username, password, character, token) VALUES ('test@gmail.com','thebestfighter','abc12345','krusnik','12')</string>
+		<string>character, token) VALUES (test@gmail.com,thebestfighter,abc12345,krusnik,12)</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.6.36-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

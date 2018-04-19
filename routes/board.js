@@ -22,7 +22,6 @@ module.exports = function(router){
         })
         console.log("Stats taken from db!"); 
       }
-      connection.end();
     });
   });
 }

@@ -39,7 +39,6 @@ module.exports = function(router){
           console.log("pic updated success!"); 
         }); 
       }
-      connection.end();
     });
   });
 }
