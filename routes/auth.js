@@ -119,7 +119,6 @@ module.exports = function(router){
             console.log("login success"); 
             console.log("*************************")
           })
-          connection.end();
         }else{
           res.json({
             msg: 'wrongPassword'
