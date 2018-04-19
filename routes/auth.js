@@ -11,8 +11,8 @@ module.exports = function(router){
     const db_email = req.body.email;
     const db_username = req.body.username;
     const db_character = req.body.character;
-    const db_experience;
-    const db_time; 
+    var db_experience = "";
+    var db_time = ""; 
     const hash = bcrypt.hashSync(req.body.password);
 
     const checkPlayerForm = new Promise((resolve, reject)=>{
