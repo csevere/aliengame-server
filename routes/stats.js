@@ -1,11 +1,10 @@
 module.exports = function(router){
-  const cors = require('cors'); 
   const mysql = require('mysql'); 
   var config = require ('../config/config');
   var connection = mysql.createConnection(config); 
   connection.connect(); 
 
-  router.post('/stats', cors(), (req,res, next)=>{
+  router.post('/stats', (req,res, next)=>{
     const charData = req.body; 
     //check the char
     var selectCharName = "SELECT * FROM `characters` WHERE `character` = ?;";
@@ -51,5 +50,6 @@ module.exports = function(router){
         }); 
       }
     });
+    connection.end();
   });
 }
