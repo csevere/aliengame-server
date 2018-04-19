@@ -50,6 +50,5 @@ module.exports = function(router){
         }); 
       }
     });
-    connection.end();
   });
 }
