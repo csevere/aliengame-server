@@ -33,13 +33,13 @@ module.exports = function(router){
           if(error){
             console.log(error)
             throw error; 
+            connection.end();
           }
           console.log(results); 
           console.log("pic updated success!"); 
         }); 
       }
     });
-    connection.end();
   });
 }
 
